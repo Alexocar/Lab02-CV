@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmación | Jeferson Huittoccollo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans flex flex-col min-h-screen items-center justify-center text-center p-4">
+  <div class="bg-gray-800 p-8 rounded-lg border border-gray-700 max-w-md shadow-2xl">
+    <div class="w-16 h-16 bg-green-900 text-green-400 rounded-full flex items-center justify-center mx-auto text-3xl font-bold mb-4">
+      ✓
+    </div>
+    <h2 class="text-2xl font-bold mb-2 text-green-400">¡Envío Exitoso!</h2>
+    
+    <!-- Mensaje dinámico -->
+    <p id="mensaje-confirmacion" class="text-gray-200 mb-4 text-lg font-medium">
+      Procesando respuesta...
+    </p>
+
+    <p class="text-gray-400 text-sm mb-6 border-t border-gray-700 pt-4">
+      muy pronto nos pondremos en contacto
+    </p>
+    
+    <a href="index.html" class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 px-6 rounded-lg transition">Volver al Inicio</a>
+  </div>
+
+  <script>
+    // Extrae los parámetros de la URL enviados desde el formulario
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get('nombre') || 'Usuario';
+    const email = params.get('email') || '';
+
+    const contenedorMensaje = document.getElementById('mensaje-confirmacion');
+    if (email) {
+      contenedorMensaje.innerHTML = `¡Gracias <strong class="text-indigo-400">${nombre}</strong>! Tu mensaje ha sido recibido correctamente desde <span class="text-indigo-300">${email}</span>.`;
+    } else {
+      contenedorMensaje.innerHTML = `¡Gracias <strong class="text-indigo-400">${nombre}</strong>! Tu mensaje ha sido recibido correctamente.`;
+    }
+  </script>
+</body>
+</html>

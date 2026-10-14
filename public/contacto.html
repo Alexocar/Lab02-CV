@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto | Jeferson Huittoccollo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans flex flex-col min-h-screen">
+  <nav class="bg-gray-800 border-b border-gray-700 p-4">
+    <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center">
+      <h1 class="text-xl font-bold text-indigo-400">Jeferson H.</h1>
+      <div class="space-x-4 text-sm md:text-base">
+        <a href="index.html" class="hover:text-indigo-400">Inicio</a>
+        <a href="sobre-mi.html" class="hover:text-indigo-400">Sobre Mí</a>
+        <a href="experiencia.html" class="hover:text-indigo-400">Experiencia</a>
+        <a href="educacion.html" class="hover:text-indigo-400">Educación</a>
+        <a href="habilidades.html" class="hover:text-indigo-400">Habilidades</a>
+        <a href="proyectos.html" class="hover:text-indigo-400">Proyectos</a>
+        <a href="contacto.html" class="text-indigo-400 font-semibold">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-xl mx-auto p-8 flex-grow w-full">
+    <h2 class="text-3xl font-bold text-indigo-400 mb-6 text-center">Contáctame</h2>
+    
+    <!-- Formulario con envió a confirmacion.html -->
+    <form action="confirmacion.html" method="GET" class="bg-gray-800 p-6 rounded-lg border border-gray-700 space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1 text-gray-300">Nombre Completo</label>
+        <input type="text" name="nombre" required placeholder="Tu nombre" class="w-full p-2.5 rounded bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-indigo-500">
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1 text-gray-300">Correo Electrónico</label>
+        <input type="email" name="email" required placeholder="correo@ejemplo.com" class="w-full p-2.5 rounded bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-indigo-500">
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-1 text-gray-300">Mensaje</label>
+        <textarea name="mensaje" rows="4" required placeholder="Escribe tu mensaje aquí..." class="w-full p-2.5 rounded bg-gray-900 border border-gray-700 text-white focus:outline-none focus:border-indigo-500"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-lg transition shadow-lg">Enviar Mensaje</button>
+    </form>
+  </main>
+</body>
+</html>
